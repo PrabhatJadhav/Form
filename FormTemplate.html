@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="Form_Assign_M.css">
+    <script>
+        function GetData() {
+            if (document.getElementById("p1").value != document.getElementById("p2").value) {
+                document.getElementById("lbl").innerHTML = "* Passwords do not match"
+            }
+            else {
+                document.write("Name is: ", document.getElementById("nm").value, "</br>", "Email: ", document.getElementById("em").value, "</br>", "Country: ", document.getElementById("country").value);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-1">
+        <div class="container-2">
+            <div class="bg-img">
+                <img src="../CSS_Programs/Images/Bg-Img.jpg" alt="" width="100%" height="100%">
+            </div>
+            <div class="content">
+                <div class="heading">
+                    <h1>Registration Form</h1>
+                </div>
+                <div class="regi-form">
+                    <table class="size">
+                        <tr>
+                            <td>
+                                <input id="nm" class="h-40 info" type="text" placeholder="  Full Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="em" class="h-40 info" type="email" placeholder="  Email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="p1" class="h-40 info" type="password" placeholder="  Password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="p2" class="h-40 info" type="password" placeholder="  Confirm Password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="pnum" class="h-40 info" type="text" placeholder="  Phone Number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="fnt" for="">Country :</label>
+                                <select id="country">
+                                    <option value="UK">UK</option>
+                                    <option value="US">US</option>
+                                    <option value="India">India</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Portugal">Portugal</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button onclick="GetData()" class="btn">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <label id="lbl"></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
