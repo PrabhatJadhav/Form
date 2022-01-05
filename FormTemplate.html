@@ -6,17 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="Form_Assign_M.css">
-    <script>
-        function GetData() {
-            if (document.getElementById("p1").value != document.getElementById("p2").value) {
-                document.getElementById("lbl").innerHTML = "* Passwords do not match"
-            }
-            else {
-                document.write("Name is: ", document.getElementById("nm").value, "</br>", "Email: ", document.getElementById("em").value, "</br>", "Country: ", document.getElementById("country").value);
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="Form_Template.css">
+    <script src="FormTemplate.js"></script>
 </head>
 
 <body>
@@ -33,22 +24,22 @@
                     <table class="size">
                         <tr>
                             <td>
-                                <input id="nm" class="h-40 info" type="text" placeholder="  Full Name">
+                                <input id="nm" class="h-40 info" type="text" placeholder="  *Full Name">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="em" class="h-40 info" type="email" placeholder="  Email">
+                                <input id="em" class="h-40 info" type="email" placeholder="  *Email">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="p1" class="h-40 info" type="password" placeholder="  Password">
+                                <input id="p1" class="h-40 info" type="password" placeholder="  *Password">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="p2" class="h-40 info" type="password" placeholder="  Confirm Password">
+                                <input id="p2" class="h-40 info" type="password" placeholder="  *Confirm Password">
                             </td>
                         </tr>
                         <tr>
@@ -75,10 +66,47 @@
                         </tr>
                     </table>
                 </div>
-                <label id="lbl"></label>
+                <label id="lbl">Fields with '*' are compulsary</label>
             </div>
         </div>
     </div>
+</body>
+
+</html>
+    <script>
+        function GetData()
+{
+    let name = document.getElementById("nm").value;
+    let mail = document.getElementById("em").value;
+    let p1 = document.getElementById("p1").value;
+    let p2 = document.getElementById("p2").value;
+    let country = document.getElementById("country").value;
+
+    if (name == "")
+    {
+        document.getElementById("lbl").innerHTML = "*Full Name is required";
+    }
+    else if (mail == "")
+    {
+        document.getElementById("lbl").innerHTML = "*Email is required";
+    }
+    else if (p1 == "" && p2 == "")
+    {
+        document.getElementById("lbl").innerHTML = "*Enter Password";
+    }
+    else if (p2 == "")
+    {
+        document.getElementById("lbl").innerHTML = "*Confirm Password";
+    }
+    else if (p1 != p2)
+    {
+        document.getElementById("lbl").innerHTML = "*Passwords Do Not Match";
+    }
+    else {
+        document.write("Name: ",name,"</br>Email: ",mail,"</br>Country: ",country);
+    }
+}
+</sript>
 </body>
 
 </html>
