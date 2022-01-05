@@ -1,0 +1,97 @@
+.container-1{
+    height: 650px;
+    background: linear-gradient(to bottom, #fbc2eb, #a18cd1);
+    width: 75%;
+    padding: 100px;
+    padding-left: 200px;
+    border: 3px;
+    
+}
+h1{
+    text-align: center;
+}
+.container-2{
+    width: 80%;
+    padding: 50px;
+    display: flex;
+    border-radius: 8px;
+    align-self: center;
+}
+.bg-img{
+    width: 50%;
+}
+.content{
+    width: 50%;
+    background-color: black;
+}
+.heading{
+    margin-bottom: 30px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.regi-form{
+    color: white;
+    margin-left: 90px;
+   
+}
+.size{
+height: 350px;
+width: 90%;
+margin-bottom: 8px;
+}
+.info{
+    width: 80%;
+    padding: 3px;
+    padding-left: 10px;
+    border: 15px;
+    border-radius: 15px;
+}
+.rad{
+    width: 6%;
+}
+.h-40{
+    height: 35px;
+    margin-bottom: 15px;
+}
+.m-b{
+    margin-bottom: 10px;
+}
+.fnt{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+select
+{
+    width: 28%;
+    height: 30px;
+    padding: 4px;
+}
+.btn{
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #57b846;
+}
+button:hover{
+    background-color: lightpink;
+    transition: 0.5s;
+}
+label{
+    padding: 3px;
+    line-height: 30px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+#lbl{
+    margin-left: 90px;
+    color: #ec93d3;
+}
